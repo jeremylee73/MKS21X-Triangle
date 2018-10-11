@@ -4,9 +4,9 @@ public class Triangle {
   private Point v3;
 
   public Triangle(Point a, Point b, Point c) {
-    v1 = a;
-    v2 = b;
-    v3 = c;
+    v1 = new Point(a);
+    v2 = new Point(b);
+    v3 = new Point(c);
   }
 
   public Triangle(double a, double b, double c, double d, double e, double f) {
