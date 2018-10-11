@@ -1,4 +1,4 @@
-public class Triangle() {
+public class Triangle {
   private Point v1;
   private Point v2;
   private Point v3;
@@ -10,12 +10,9 @@ public class Triangle() {
   }
 
   public Triangle(double a, double b, double c, double d, double e, double f) {
-    v1.x = a;
-    v1.y = b;
-    v2.x = c;
-    v2.y = d;
-    v3.x = e;
-    v3.y = f;
+    v1 = new Point(a,b);
+    v2 = new Point(c, d);
+    v3 = new Point(e,f);
   }
 
   public double getPerimeter() {
@@ -23,26 +20,16 @@ public class Triangle() {
   }
 
   public Point getVertex(int a) {
-    if (a==0) {
-      return Point(v1);
-    } else if (a==1) {
-      return Point(v2);
-    } else {
-      return Point(v3);
-    }
+    if (a==0) return new Point(v1);
+    if (a==1) return new Point(v2);
+    if (a==2) return new Point(v3);
+    return null;
   }
 
   public void setVertex(int a, Point p) {
-    if (a==0) {
-      v1.x = p.x;
-      v1.y = p.y;
-    } else if (a==1) {
-      v2.x = p.x;
-      v2.y = p.y;
-    } else {
-      v3.x = p.x;
-      v3.y = p.y;
-    }
+    if (a==0) v1 = new Point(p);
+    if (a==1) v2 = new Point(p);
+    if (a==2) v3 = new Point(p);
   }
 
   public String toString() {

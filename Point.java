@@ -1,4 +1,4 @@
-public class Point() {
+public class Point {
   private double x;
   private double y;
 
@@ -20,11 +20,19 @@ public class Point() {
     return y;
   }
 
+  public void setX(double x) {
+    this.x = x;
+  }
+
+  public void setY(double y) {
+    this.y = y;
+  }
+
   public double distanceTo(Point a) {
     return Math.sqrt(Math.pow((a.x - this.x),2) + Math.pow((a.y - this.y), 2));
   }
 
-  public double distance(Point a, Point b) {
+  public static double distance(Point a, Point b) {
     return Math.sqrt(Math.pow((b.x - a.x), 2) + Math.pow((b.y - a.y), 2));
   }
 
